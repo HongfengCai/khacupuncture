@@ -1,0 +1,21 @@
+---
+layout: post
+title: Ubuntu Learnning
+categories: Linux
+tags: ubuntu
+author: Aemon
+description: This is Notes about Linux learnning
+---
+
+```bash
+pwd 打印当前工作路径
+ls 显示当前路径下的内容
+mkdir 创建文件夹
+touch 创建文件
+cp 文件名 文件名 复制
+rm 删除文件
+rmdir 删除文件夹
+rm -r 文件夹名  删除文件夹（该文件夹下有内容时）
+clear 清除当前命令下的历史记录
+man 命令   查看当前命令的详细用法 such as man ls，man cp
+```
