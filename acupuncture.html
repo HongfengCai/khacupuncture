@@ -5,10 +5,37 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
   <style>
+  /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+   
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
     /* Remove the navbar's default rounded borders and increase the bottom margin */ 
     .navbar {
       margin-bottom: 50px;
@@ -28,108 +55,57 @@
 	body {
 	   background-color:#FFFF99;";
 	}
-	body {
-  font-family: Arial;
-  font-size: 17px;
-  padding: 8px;
+	
+body {margin:0;height:2000px;}
+	.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
-* {
-  box-sizing: border-box;
-}
-
-.row {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  margin: 0 -16px;
-}
-
-.col-25 {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
-}
-
-.col-50 {
-  -ms-flex: 50%; /* IE10 */
-  flex: 50%;
-}
-
-.col-75 {
-  -ms-flex: 75%; /* IE10 */
-  flex: 75%;
-}
-
-.col-25,
-.col-50,
-.col-75 {
-  padding: 0 16px;
-}
-
-.container {
-  background-color: #f2f2f2;
-  padding: 5px 20px 15px 20px;
-  border: 1px solid lightgrey;
-  border-radius: 3px;
-}
-
-input[type=text] {
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-label {
-  margin-bottom: 10px;
+.icon-bar a {
   display: block;
-}
-
-.icon-container {
-  margin-bottom: 20px;
-  padding: 7px 0;
-  font-size: 24px;
-}
-
-.btn {
-  background-color: #4CAF50;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
   color: white;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  width: 100%;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 17px;
+  font-size: 20px;
 }
 
-.btn:hover {
-  background-color: #45a049;
+.icon-bar a:hover {
+    background-color: #000;
 }
 
-a {
-  color: #2196F3;
+.facebook {
+  background: #3B5998;
+  color: white;
 }
 
-hr {
-  border: 1px solid lightgrey;
+.twitter {
+  background: #55ACEE;
+  color: white;
 }
 
-span.price {
-  float: right;
-  color: grey;
+.google {
+  background: #dd4b39;
+  color: white;
 }
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
-@media (max-width: 800px) {
-  .row {
-    flex-direction: column-reverse;
-  }
-  .col-25 {
-    margin-bottom: 20px;
-  }
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+
+.content {
+  margin-left: 75px;
+  font-size: 30px;
 }
   </style>
 </head>
@@ -173,21 +149,21 @@ span.price {
     <div class="col-sm-4">
       <div class="panel panel-primary">
         <div class="panel-heading">About</div>
-        <div class="panel-body"><img src="img/page1_icon3.png" class="img-responsive" style="width:50%" alt="Image"></div>
+        <div class="panel-body"><img src="img/page1_icon3.png" class="img-responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-danger">
         <div class="panel-heading">Acupuncture</div>
-        <div class="panel-body"><img src="img/page1_icon3.png" class="img-responsive" style="width:50%" alt="Image"></div>
+        <div class="panel-body"><img src="img/page1_icon3.png" class="img-responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-success">
         <div class="panel-heading">News</div>
-        <div class="panel-body"><img src="img/page1_icon3.png" class="img-responsive" style="width:50%" alt="Image"></div>
+        <div class="panel-body"><img src="img/page1_icon3.png" class="img-responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
       </div>
     </div>
@@ -196,29 +172,6 @@ span.price {
 
 <div class="container">    
   <div class="row">
-    <div class="col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">Contact</div>
-        <div class="panel-body"><img src="img/page1_icon3.png" class="img-responsive" style="width:50%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-      </div>
-    </div>
-	
-    <div class="col-sm-4"> 
-      <div class="panel panel-primary">
-        <div class="panel-heading">Newsletter</div>
-        <div class="panel-body"><img src="img/page1_icon3.png" class="img-responsive" style="width:50%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-      </div>
-    </div>
-	
-    <div class="col-sm-4"> 
-      <div class="panel panel-primary">
-        <div class="panel-heading">Subscription</div>
-        <div class="panel-body"><img src="img/page1_icon3.png" class="img-responsive" style="width:50%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-      </div>
-    </div>
 	
 	<div class="col-sm-9">
       <h4><small></small></h4>
@@ -229,16 +182,7 @@ span.price {
       <p><span style="font-size: x-large;">Traditional Chinese Herbal Medicine?</p>
 	  <p><span style="font-size: x-large;">Online booking and shop for your appointments and prescription preparation?</p>
 	  <p><span style="font-size: x-large;">Online consultation to heal the cause of the illness from natural medicine? </P>
-	  <p><span style="font-size: large;">What to expect</P>
-	  <p><span style="font-size: large;">Both acupuncture and CHinese herbal medicine have been used successfully for many thousands of years in the treatment of a wide range of conditions. By inserting a number of very fine needles into specific points along a system of energy pathyways or meridians, the acupuncturist endeavours to restore balance on every level. Because acupuncture works on the whole body, change can be generated emotionally as well as physically.</P>
-	  <p><span style="font-size: large;"></P>
-	  <p><span style="font-size: large;"></P>
-	  <P><span style="font-size: large;"></P>
-	  <p><span style="font-size: large;"></P>
-	  <p><span style="font-size: large;"></P>
-	  <p><span style="font-size: large;"></P>
-	  <p><span style="font-size: large;"></P>
-	  
+
 	  
 	  
 
@@ -250,87 +194,46 @@ span.price {
   </div>
 </div><br><br>
 
-<h2>Responsive Checkout Form</h2>
-<p>Resize the browser window to see the effect. When the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other.</p>
-<div class="row">
-  <div class="col-75">
-    <div class="container">
-      <form action="/action_page.php">
-      
-        <div class="row">
-          <div class="col-50">
-            <h3>Billing Address</h3>
-            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
-            <label for="email"><i class="fa fa-envelope"></i> Email</label>
-            <input type="text" id="email" name="email" placeholder="john@example.com">
-            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
-            <label for="city"><i class="fa fa-institution"></i> City</label>
-            <input type="text" id="city" name="city" placeholder="New York">
 
-            <div class="row">
-              <div class="col-50">
-                <label for="state">State</label>
-                <input type="text" id="state" name="state" placeholder="NY">
-              </div>
-              <div class="col-50">
-                <label for="zip">Zip</label>
-                <input type="text" id="zip" name="zip" placeholder="10001">
-              </div>
-            </div>
-          </div>
+	<div class="icon-bar">
+  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
+  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+  <a href="#" class="google"><i class="fa fa-google"></i></a> 
+  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
 
-          <div class="col-50">
-            <h3>Payment</h3>
-            <label for="fname">Accepted Cards</label>
-            <div class="icon-container">
-              <i class="fa fa-cc-visa" style="color:navy;"></i>
-              <i class="fa fa-cc-amex" style="color:blue;"></i>
-              <i class="fa fa-cc-mastercard" style="color:red;"></i>
-              <i class="fa fa-cc-discover" style="color:orange;"></i>
-            </div>
-            <label for="cname">Name on Card</label>
-            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
-            <label for="ccnum">Credit card number</label>
-            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
-            <label for="expmonth">Exp Month</label>
-            <input type="text" id="expmonth" name="expmonth" placeholder="September">
-            <div class="row">
-              <div class="col-50">
-                <label for="expyear">Exp Year</label>
-                <input type="text" id="expyear" name="expyear" placeholder="2018">
-              </div>
-              <div class="col-50">
-                <label for="cvv">CVV</label>
-                <input type="text" id="cvv" name="cvv" placeholder="352">
-              </div>
-            </div>
-          </div>
-          
-        </div>
-        <label>
-          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
-        </label>
-        <input type="submit" value="Continue to checkout" class="btn">
-      </form>
+</div>
+
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="#">Herbal Medicine</a></p>
+      <p><a href="#">Electrical Needles</a></p>
+      <p><a href="#">Cupping</a></p>
+	  <p><a href="#">Acupressure</a></P>
     </div>
-  </div>
-  <div class="col-25">
-    <div class="container">
-      <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
-      <p><a href="#">Product 1</a> <span class="price">$15</span></p>
-      <p><a href="#">Product 2</a> <span class="price">$5</span></p>
-      <p><a href="#">Product 3</a> <span class="price">$8</span></p>
-      <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+    <div class="col-sm-8 text-left"> 
+      <h1>Welcome</h1>
+      <p>Our mission is to help people increase their general health wellbeing through a structured, positive, and professional holistic natural medicine program that enables them to develop long-term, meaningful health quality life.
+Both Acupuncture and Chinese Herbal Medicine have been used successfully for many thousands of years in the treatment of a wide range of conditions. By inserting a number of very fine needles into specific points along a system of energy pathways or meridians, the acupuncturist endeavours to restore balance on every level. Because acupuncture works on the whole body, change can be generated emotionally as well as physically.
+
+After taking an extensive case history, the practitioner will decide on the most appropriate course of treatment. This may be acupuncture along or may incorporate Chinese Herbal Medicine, the use of moxibustion (the warming of acupuncture points using the herb Artemisia), tui-na (massage), dietary or lifestyle advice and perhaps the recommendation of gentle exercises (tai chi) or breathing (qi gong) techniques. 
+A course of treatment is generally considered to be between 8-10 treatments. Some conditions will benefit in fewer than this and long term problems could be expected to require considerably more.</p>
       <hr>
-      <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+      
+    </div>
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <div class="panel-body"><img src="img/page1_icon4.png" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+      <div class="well">
+        <div class="panel-body"><img src="img/page1_icon4.png" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+	  
+	  
     </div>
   </div>
 </div>
-
-
-	
  
  
 <footer class="container-fluid text-center">
