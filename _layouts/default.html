@@ -1,24 +1,16 @@
 	<!DOCTYPE html>
 <html lang="en">
 	{% include head.html %}
-<body>
+    
+    <body>
 
-<div class="jumbotron">
-  <div class="container text-center">
-    <h1>khacupuncture Care</h1>      
-    <p>Healthy, Natural & Balance</p>
-  </div>
-</div>
+        {% include header.html %}
 
-{% include nav.html %}
+        {% include nav.html %}
 
+        {{ content }}
 
-{{ content }}
+        {% include footer.html %}
 
-	
- {% include footer.html %}
- 
-
-
-</body>
+    </body>
 </html>
