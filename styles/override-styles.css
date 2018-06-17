@@ -31,3 +31,10 @@ body {
 .sub-title{
     color:green;
 }
+.clearboth{
+clear: both;
+}
+.contact-left{
+    float: left;
+    width: 48%;
+}
