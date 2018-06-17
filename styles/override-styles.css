@@ -18,3 +18,11 @@ footer {
 body {
     background-color:#FFFF99;
 }
+.search-box{
+    float:right;
+}
+.main-content{
+
+    background-color: #ffffff;
+    padding: 15px;
+}
