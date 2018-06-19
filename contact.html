@@ -1,0 +1,63 @@
+---
+layout: contact-layout
+title: Contact
+---
+
+<section class="contact-left">
+    <p>&nbsp;</p>
+    <h2>Contact information</h2>
+    <p>Ph: 03 4737166</p>
+    <p>Email:<a href="mailto:accumed@gmail.com"> accumed@gmail.com </a></p>
+    <p>Address: 300 high street, dunedin. </p>
+</section>
+<section class="contact-left">
+    <div id="map" style="width:99%; height:370px; float:left; margin-top: 25px;"></div>
+    <script>
+        function myMap() {
+              var myCenter = new google.maps.LatLng(-45.8795637,170.4927907);
+              var mapCanvas = document.getElementById("map");
+              var mapOptions = {center: myCenter, zoom: 15};
+              var map = new google.maps.Map(mapCanvas, mapOptions);
+              var marker = new google.maps.Marker({position:myCenter});
+              marker.setMap(map);
+
+              var infowindow = new google.maps.InfoWindow({
+                content: "KHAcupuncture - 300 High Street"
+              });
+              infowindow.open(map,marker);
+            }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCk8Ge_26DbfrhHt8oMNYZDG1LMN-96eBM&callback=myMap"></script>
+</section>
+<div class="clearboth">&nbsp;</div>
+<section>
+<form action="/action_page.php">
+    <div class="row">
+        <h2 style="text-align:center">Login with Social Media or Manually</h2>
+            <div class="vl">
+                <span class="vl-innertext">or</span>
+            </div>
+            <div class="col">
+                <a href="#" class="fb btn">
+                    <i class="fa fa-facebook fa-fw">
+                       </i>  
+                        Login with Facebook
+                </a>		 
+                <a href="#" class="twitter btn">
+                    <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+                </a>         
+                <a href="#" class="google btn"><i class="fa fa-google fa-fw">
+                    </i> Login with Google+
+                </a>
+            </div>
+            <div class="col">
+                    <div class="hide-md-lg">
+                        <p>Or sign in manually:</p>
+                    </div>
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="submit" value="Login">
+            </div>
+    </div>
+</form>
+</section>

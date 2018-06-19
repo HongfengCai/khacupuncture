@@ -1,0 +1,14 @@
+---
+layout: default
+title: News
+---
+
+<h3>News List</h3>
+<ul class="listcontent">
+    {% for post in site.posts %}
+      <li>
+        <a title="{{ post.title }}" target="blank" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>&nbsp;&nbsp;[<small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>]
+      </li>
+    {% endfor %}
+  </ul>
+  
